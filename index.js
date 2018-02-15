@@ -1,5 +1,8 @@
 const express = require('express');
 const passport = require('passport');
+const mongoose = require('mongoose');
+const cookieSession = require('cookie-session');
+
 const keys = require('./config/keys');
 
 require('./services/passport');
@@ -28,5 +31,5 @@ app.get('/', (req, res) => {
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-    console.log('Server started');
+    console.log('Serveur démarré sur le port : ' + PORT);
 });
